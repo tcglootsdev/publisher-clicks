@@ -1,3 +1,3 @@
 <script>
-    window.PublisherClicksWebData = {{ Js::from($data ?? []) }};
+    window.Data = {{ Js::from($data ?? []) }};
 </script>

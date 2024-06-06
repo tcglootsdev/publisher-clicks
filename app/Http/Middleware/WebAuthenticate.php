@@ -11,6 +11,8 @@ use App\Helpers\Utils;
 class WebAuthenticate
 {
     private $mapRolesToUrls = [
+        'POST-/web/auth/signout' => ['admin'],
+        'GET-/admin/dashboard' => ['admin']
     ];
 
     public function handle(Request $request, Closure $next, string ...$params): Response

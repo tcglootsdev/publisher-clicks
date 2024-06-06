@@ -1,23 +1,4 @@
-const PublisherClicksWebAdmin = (() => {
-    const startFormSubmit = (formElem) => {
-        let submitBtn = $(formElem).find('button[type="submit"]');
-        submitBtn = {
-            labelElem: submitBtn.children('span.indicator-label'),
-            progressElem: submitBtn.children('span.indicator-progress')
-        }
-        submitBtn.labelElem.hide();
-        submitBtn.progressElem.show();
-        return { submitBtn };
-    }
-
-    const endFormSubmit = ({ submitBtn }) => {
-        // Because submitBtn is gotten in startFormSubmit function, it is unnecessary to get again
-        if (!PublisherClicksWeb.isEmpty(submitBtn)) {
-            submitBtn.progressElem.hide();
-            submitBtn.labelElem.show();
-        }
-    }
-
+window.Admin = (() => {
     const showPageLoading = () => {
         const loadingElem = document.createElement("div");
         document.body.prepend(loadingElem);
@@ -38,17 +19,18 @@ const PublisherClicksWebAdmin = (() => {
 
     return {
         init: () => {
-            if (window.PublisherClicksWebAdminPage) {
-                PublisherClicksWebAdminPage.init();
+            if (window.PtHeader) {
+                PtHeader.init();
+            }
+            if (window.Page) {
+                Page.init();
             }
         },
-        startFormSubmit,
-        endFormSubmit,
         showPageLoading,
         hidePageLoading,
     }
 })();
 
 $(document).ready(() => {
-    PublisherClicksWebAdmin.init();
+    Admin.init();
 });

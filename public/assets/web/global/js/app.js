@@ -1,4 +1,4 @@
-const PublisherClicksWeb = (() => {
+window.Web = (() => {
     const isEmpty = (value) => {
         if (
             value === undefined ||

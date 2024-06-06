@@ -6,9 +6,17 @@ use Illuminate\Support\Facades\Route;
 //    return response()->redirectTo('/front/web/admin/auth/signin');
 //});
 
+Route::get('/', function () {
+    return response()->redirectTo('/admin/auth/signin');
+});
+
 Route::middleware('webauth')->group(function () {
     Route::get('/auth/signin', function () {
         return view('web.admin.pages.signin');
+    });
+
+    Route::get('/dashboard', function () {
+        return view('web.admin.pages.dashboard', ['title' => 'Dashboard']);
     });
 });
 

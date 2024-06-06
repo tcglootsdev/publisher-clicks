@@ -1,13 +1,13 @@
 @php
     $user = Auth::guard('web')->user();
 @endphp
-        <!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>PublisherClicks Admin | {{ $title }}</title>
+    <title>{{ $title }}</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="shortcut icon" href="{{ URL::asset('assets/web/global/favicon.ico') }}"/>
+    {{--    <link rel="shortcut icon" href="{{ URL::asset('assets/web/global/favicon.ico') }}"/>--}}
     <link href="{{ URL::asset('assets/web/global/css/plugins.bundle.css') }}" rel="stylesheet" type="text/css"/>
     <link href="{{ URL::asset('assets/web/admin/css/style.bundle.css') }}" rel="stylesheet" type="text/css"/>
     @stack('styles')
@@ -57,7 +57,7 @@
             <div class="footer py-4 d-flex flex-lg-column" id="kt_footer">
                 <div class="container-fluid d-flex flex-column flex-md-row flex-stack">
                     <div class="text-gray-900 order-2 order-md-1">
-                        <span class="text-muted fw-semibold me-2">2024&copy;PublisherClicks</span>
+{{--                        <span class="text-muted fw-semibold me-2">2024&copy;</span>--}}
                     </div>
                 </div>
             </div>
@@ -77,7 +77,10 @@
 <script type="text/javascript" src="{{ URL::asset('assets/web/global/js/plugins.bundle.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('assets/web/global/js/app.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('assets/web/admin/js/scripts.bundle.js') }}"></script>
-@include('web.global.parts.csrf-token')
+@include('web.global.parts.csrfToken')
+@include('web.global.parts.serverUrl')
+@include('web.global.parts.user')
+@include('web.global.parts.data')
 <script type="text/javascript" src="{{ URL::asset('assets/web/admin/js/parts/menu.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('assets/web/admin/js/parts/header.js') }}"></script>
 @stack('scripts')

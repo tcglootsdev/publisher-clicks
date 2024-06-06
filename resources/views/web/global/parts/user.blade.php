@@ -4,5 +4,5 @@
 @endphp
 
 <script>
-    window.PublisherClicksWebUserInfo = {{ Js::from($user) }};
+    window.User = {{ Js::from($user) }};
 </script>

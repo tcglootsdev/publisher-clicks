@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>PublisherClicks Admin | Sign In</title>
+    <title>Publisher Clicks | Sign In</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="shortcut icon" href="{{ URL::asset('assets/web/global/favicon.ico') }}"/>
+{{--    <link rel="shortcut icon" href="{{ URL::asset('assets/web/global/favicon.ico') }}"/>--}}
     <link href="{{ URL::asset('assets/web/global/css/plugins.bundle.css') }}" rel="stylesheet" type="text/css"/>
     <link href="{{ URL::asset('assets/web/admin/css/style.bundle.css') }}" rel="stylesheet" type="text/css"/>
     <script>

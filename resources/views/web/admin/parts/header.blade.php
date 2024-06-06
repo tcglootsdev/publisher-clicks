@@ -1,3 +1,7 @@
+@php
+    $partId = 'pt-header';
+@endphp
+
 <div id="kt_header" class="header pt-class" data-kt-sticky="true" data-kt-sticky-name="header" data-kt-sticky-offset="{default: '200px', lg: '300px'}">
     <div class="container-fluid d-flex align-items-stretch justify-content-between">
         <div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
@@ -87,23 +91,23 @@
                 </div>
                 <div class="d-flex align-items-center ms-2 ms-lg-3" id="kt_header_user_menu_toggle">
                     <div class="cursor-pointer symbol symbol-35px symbol-lg-35px" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
-                        <img alt="Pic" src="{{ $user->avatar }}" />
+                        <img alt="Pic" src="{{ URL::asset('assets/web/global/images/svg/user.svg') }}" />
                     </div>
                     <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg menu-state-color fw-semibold py-4 fs-6 w-275px" data-kt-menu="true">
                         <div class="menu-item px-3">
                             <div class="menu-content d-flex align-items-center px-3">
                                 <div class="symbol symbol-50px me-5">
-                                    <img alt="Logo" src="{{ $user->avatar }}" />
+                                    <img alt="Logo" src="{{ URL::asset('assets/web/global/images/svg/user.svg') }}" />
                                 </div>
                                 <div class="d-flex flex-column">
-                                    <div class="fw-bold d-flex align-items-center fs-5">{{ $user->fullname  }}</div>
+                                    <div class="fw-bold d-flex align-items-center fs-5">{{ $user->username  }}</div>
                                 </div>
                             </div>
                         </div>
                         <div class="separator my-2"></div>
 
                         <div class="menu-item px-5">
-                            <a href="javascript:PublisherClicksWebAdminPartHeader.signout()" class="menu-link px-5">Sign Out</a>
+                            <a href="javascript:void(0);" class="menu-link px-5 {{ $partId }}-signout">Sign Out</a>
                         </div>
                     </div>
                 </div>

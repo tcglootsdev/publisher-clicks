@@ -1,16 +1,11 @@
-(() => {
-    if (window.PtMenu !== undefined) return;
-    window.PtMenu = function () {
-        const partId = 'pt-menu';
+window.PtMenu = function () {
+    const partId = 'pt-menu';
 
-        const realId = '.' + partId;
+    const setActive = (menuItem) => {
+        $('.' + partId + '-' + menuItem).addClass('show');
+    }
 
-        const setActive = (menuItem) => {
-            $(realId + ' .' + partId + '-' + menuItem).addClass('show');
-        }
-
-        return {
-            setActive
-        }
-    }();
-})();
+    return {
+        setActive
+    }
+}();

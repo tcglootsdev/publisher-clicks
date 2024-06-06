@@ -1,4 +1,4 @@
-window.PublisherClicksWebAdminPage = function () {
+window.Page = function () {
     const setFormValidation = function () {
         $("#pg-signin-form").validate({
             errorClass: 'text-danger',
@@ -22,11 +22,11 @@ window.PublisherClicksWebAdminPage = function () {
             },
             submitHandler: function(element, event) {
                 event.preventDefault();
-                const loadingElem = PublisherClicksWebAdmin.showPageLoading();
-                PublisherClicksWeb.ajax('post', '/web/auth/signin', PublisherClicksWeb.getFormData(element), (success, data, error) => {
-                    PublisherClicksWebAdmin.hidePageLoading(loadingElem);
+                const loadingElem = Admin.showPageLoading();
+                Web.ajax('post', '/web/auth/signin', Web.getFormData(element), (success, data, error) => {
+                    Admin.hidePageLoading(loadingElem);
                     if (!success) {
-                        PublisherClicksWeb.alert('warning', error);
+                        Web.alert('warning', error);
                         return;
                     }
                     window.location.href = '/admin';
