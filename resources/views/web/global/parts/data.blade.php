@@ -1,3 +1,3 @@
 <script>
-    window.TCGLootsWebData = {{ Js::from($data ?? []) }};
+    window.PublisherClicksWebData = {{ Js::from($data ?? []) }};
 </script>

@@ -4,5 +4,5 @@
 @endphp
 
 <script>
-    window.TCGLootsWebUserInfo = {{ Js::from($user) }};
+    window.PublisherClicksWebUserInfo = {{ Js::from($user) }};
 </script>

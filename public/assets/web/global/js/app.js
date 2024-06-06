@@ -1,4 +1,4 @@
-const TCGLootsWeb = (() => {
+const PublisherClicksWeb = (() => {
     const isEmpty = (value) => {
         if (
             value === undefined ||

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>TCGLoots Admin | Sign In</title>
+    <title>PublisherClicks Admin | Sign In</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="shortcut icon" href="{{ URL::asset('assets/web/global/favicon.ico') }}"/>
@@ -41,7 +41,7 @@
                     <form class="form w-100" id="pg-signin-frm">
                         @csrf
                         <div class="text-center mb-10">
-                            <h1 class="text-gray-900 mb-3">Welcome To TCGLoots (Admin)</h1>
+                            <h1 class="text-gray-900 mb-3">Welcome Back!</h1>
                         </div>
                         <div class="fv-row mb-10">
                             <label class="form-label fs-6 fw-bold text-gray-900">Username</label>

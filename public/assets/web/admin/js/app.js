@@ -1,4 +1,4 @@
-const TCGLootsWebAdmin = (() => {
+const PublisherClicksWebAdmin = (() => {
     const startFormSubmit = (formElem) => {
         let submitBtn = $(formElem).find('button[type="submit"]');
         submitBtn = {
@@ -12,7 +12,7 @@ const TCGLootsWebAdmin = (() => {
 
     const endFormSubmit = ({ submitBtn }) => {
         // Because submitBtn is gotten in startFormSubmit function, it is unnecessary to get again
-        if (!TCGLootsWeb.isEmpty(submitBtn)) {
+        if (!PublisherClicksWeb.isEmpty(submitBtn)) {
             submitBtn.progressElem.hide();
             submitBtn.labelElem.show();
         }
@@ -38,8 +38,8 @@ const TCGLootsWebAdmin = (() => {
 
     return {
         init: () => {
-            if (window.TCGLootsWebAdminPage) {
-                TCGLootsWebAdminPage.init();
+            if (window.PublisherClicksWebAdminPage) {
+                PublisherClicksWebAdminPage.init();
             }
         },
         startFormSubmit,
@@ -50,5 +50,5 @@ const TCGLootsWebAdmin = (() => {
 })();
 
 $(document).ready(() => {
-    TCGLootsWebAdmin.init();
+    PublisherClicksWebAdmin.init();
 });

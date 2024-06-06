@@ -4,7 +4,7 @@
         <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>TCGLoots Admin | {{ $title }}</title>
+    <title>PublisherClicks Admin | {{ $title }}</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="shortcut icon" href="{{ URL::asset('assets/web/global/favicon.ico') }}"/>
@@ -57,7 +57,7 @@
             <div class="footer py-4 d-flex flex-lg-column" id="kt_footer">
                 <div class="container-fluid d-flex flex-column flex-md-row flex-stack">
                     <div class="text-gray-900 order-2 order-md-1">
-                        <span class="text-muted fw-semibold me-2">2024&copy;TCGLoots</span>
+                        <span class="text-muted fw-semibold me-2">2024&copy;PublisherClicks</span>
                     </div>
                 </div>
             </div>

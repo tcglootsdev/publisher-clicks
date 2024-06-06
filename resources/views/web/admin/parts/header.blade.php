@@ -103,7 +103,7 @@
                         <div class="separator my-2"></div>
 
                         <div class="menu-item px-5">
-                            <a href="javascript:TCGLootsWebAdminPartHeader.signout()" class="menu-link px-5">Sign Out</a>
+                            <a href="javascript:PublisherClicksWebAdminPartHeader.signout()" class="menu-link px-5">Sign Out</a>
                         </div>
                     </div>
                 </div>

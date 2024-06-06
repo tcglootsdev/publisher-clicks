@@ -1,4 +1,4 @@
-window.TCGLootsWebAdminPage = function () {
+window.PublisherClicksWebAdminPage = function () {
     const setFormValidation = function () {
         $("#pg-signin-frm").validate({
             errorClass: 'text-danger',
@@ -22,11 +22,11 @@ window.TCGLootsWebAdminPage = function () {
             },
             submitHandler: function(element, event) {
                 event.preventDefault();
-                const loadingElem = TCGLootsWebAdmin.showPageLoading();
-                TCGLootsWeb.ajax('post', '/web/auth/signin', TCGLootsWeb.getFormData(element), (success, data, error) => {
-                    TCGLootsWebAdmin.hidePageLoading(loadingElem);
+                const loadingElem = PublisherClicksWebAdmin.showPageLoading();
+                PublisherClicksWeb.ajax('post', '/web/auth/signin', PublisherClicksWeb.getFormData(element), (success, data, error) => {
+                    PublisherClicksWebAdmin.hidePageLoading(loadingElem);
                     if (!success) {
-                        TCGLootsWeb.alert('warning', error);
+                        PublisherClicksWeb.alert('warning', error);
                         return;
                     }
                     window.location.href = '/admin';
