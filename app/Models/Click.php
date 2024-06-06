@@ -2,19 +2,21 @@
 
 namespace App\Models;
 
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Helpers\Utils;
 
-class User extends Authenticatable
+class Click extends Model
 {
     use SoftDeletes;
 
-    protected $fillable = ['username', 'password', 'role'];
+    protected $table = 'clicks';
 
-    public function clicks()
+    protected $fillable = ['user_id'];
+
+    public function publisher()
     {
-        return $this->hasMany(Click::class, 'user_id');
+        return $this->belongsTo(User::class, 'user_id');
     }
 
     public static function getAvailableFields($client, $role, $op)
@@ -24,10 +26,7 @@ class User extends Authenticatable
                 'id' => [
                     'r' => ['admin'],
                 ],
-                'username' => [
-                    'r' => ['admin'],
-                ],
-                'role' => [
+                'user_id' => [
                     'r' => ['admin'],
                 ],
                 'created_at' => [
@@ -42,7 +41,7 @@ class User extends Authenticatable
     {
         if ($client === 'web') {
             if ($user->role === 'admin') {
-                return [['role', '!=', 'admin']];
+                return [true];
             }
         }
         return [false];

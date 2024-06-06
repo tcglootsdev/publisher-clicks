@@ -43,6 +43,7 @@ class RouteServiceProvider extends ServiceProvider
             Route::middleware('web')->group(function () {
                 Route::group([], base_path('routes/front/front.php'));
                 Route::group([], base_path('routes/web/web.php'));
+                Route::group(['prefix' => 'track'], base_path('routes/track.php'));
             });
         });
     }

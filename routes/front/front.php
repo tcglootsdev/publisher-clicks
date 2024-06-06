@@ -9,3 +9,7 @@ use Illuminate\Support\Facades\Route;
 Route::group([], function () {
    Route::group([], __DIR__.'/web/web.php');
 });
+
+Route::get('/welcome', function () {
+    return view('welcome');
+});

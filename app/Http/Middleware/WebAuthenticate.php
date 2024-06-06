@@ -12,7 +12,12 @@ class WebAuthenticate
 {
     private $mapRolesToUrls = [
         'POST-/web/auth/signout' => ['admin'],
-        'GET-/admin/dashboard' => ['admin']
+        'GET-/admin/dashboard' => ['admin'],
+        'GET-/admin/publishers' => ['admin'],
+        'GET-/admin/publishers/{id}/clicks' => ['admin'],
+        'GET-/web/users' => ['admin'],
+        'GET-/web/clicks' => ['admin'],
+        'GET-/web/clicks/statistic' => ['admin'],
     ];
 
     public function handle(Request $request, Closure $next, string ...$params): Response
