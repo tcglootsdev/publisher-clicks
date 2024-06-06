@@ -38,7 +38,7 @@
         <div class="d-flex flex-column flex-lg-row-fluid py-10">
             <div class="d-flex flex-center flex-column flex-column-fluid">
                 <div class="w-lg-500px p-10 p-lg-15 mx-auto">
-                    <form class="form w-100" id="pg-signin-frm">
+                    <form class="form w-100" id="pg-signin-form">
                         @csrf
                         <div class="text-center mb-10">
                             <h1 class="text-gray-900 mb-3">Welcome Back!</h1>

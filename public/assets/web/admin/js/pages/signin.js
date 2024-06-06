@@ -1,6 +1,6 @@
 window.PublisherClicksWebAdminPage = function () {
     const setFormValidation = function () {
-        $("#pg-signin-frm").validate({
+        $("#pg-signin-form").validate({
             errorClass: 'text-danger',
             rules: {
                 username: {
